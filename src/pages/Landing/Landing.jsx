@@ -89,7 +89,7 @@ const Landing = () => {
         <div className="landing-left">
           <div className="background-overlay">
             <div className="slogan">
-              <h1>discover your creative soul</h1>
+              <h1>Discover Your Creative Soul</h1>
             </div>
           </div>
         </div>
