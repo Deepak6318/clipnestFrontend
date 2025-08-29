@@ -1,0 +1,120 @@
+
+.home {
+  padding: 2rem 0;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Masonry Layout using react-masonry-css */
+.masonry-grid {
+  display: flex;
+  margin-left: -1.5rem; /* gutter compensation */
+  width: auto;
+}
+
+.masonry-grid_column {
+  padding-left: 1.5rem; /* gutter */
+  background-clip: padding-box;
+}
+
+.post-wrapper {
+  display: block;
+  width: auto;
+  margin: 0 0 1.5rem;
+  break-inside: avoid;
+}
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+  .masonry-grid { margin-left: -2rem; }
+  .masonry-grid_column { padding-left: 2rem; }
+  .post-wrapper { margin-bottom: 2rem; }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid { margin-left: -2.5rem; }
+  .masonry-grid_column { padding-left: 2.5rem; }
+  .post-wrapper { margin-bottom: 2.5rem; }
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid { margin-left: -3rem; }
+  .masonry-grid_column { padding-left: 3rem; }
+  .post-wrapper { margin-bottom: 3rem; }
+}
+
+/* Loading Animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    padding: 1.5rem 0;
+  }
+  
+  .home-header {
+    margin-bottom: 2rem;
+  }
+  
+  .home-header h1 {
+    font-size: 2rem;
+  }
+  
+  .home-header p {
+    font-size: 1rem;
+  }
+  
+  .masonry-grid { margin-left: -1rem; }
+  .masonry-grid_column { padding-left: 1rem; }
+  .post-wrapper { margin-bottom: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .home-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .masonry-grid { margin-left: -1rem; }
+  .masonry-grid_column { padding-left: 1rem; }
+  .post-wrapper { margin-bottom: 1rem; }
+}

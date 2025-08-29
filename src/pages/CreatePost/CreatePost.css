@@ -1,0 +1,243 @@
+.create-post {
+  padding: 2rem 0;
+}
+
+.create-post-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.create-post-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.create-post-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.create-post-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.create-post-form {
+  background-color: var(--bg-primary);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* Image Upload Section */
+.image-upload-section {
+  margin-bottom: 2rem;
+}
+
+.image-upload-label {
+  display: block;
+  cursor: pointer;
+  border: 2px dashed var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.image-upload-label:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg-secondary);
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: var(--text-light);
+}
+
+.upload-placeholder span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.upload-placeholder small {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.image-preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: var(--error-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
+
+.image-input {
+  display: none;
+}
+
+/* Form Fields */
+.form-fields {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--bg-secondary);
+  transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.tags-input-wrapper,
+.location-input-wrapper {
+  position: relative;
+}
+
+.tags-icon,
+.location-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.tags-input-wrapper .form-input,
+.location-input-wrapper .form-input {
+  padding-left: 3rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-post {
+    padding: 1.5rem 0;
+  }
+  
+  .create-post-header {
+    margin-bottom: 2rem;
+  }
+  
+  .create-post-header h1 {
+    font-size: 2rem;
+  }
+  
+  .create-post-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-post-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .create-post-form {
+    padding: 1rem;
+  }
+  
+  .image-upload-label {
+    padding: 1.5rem;
+  }
+  
+  .upload-icon {
+    font-size: 2.5rem;
+  }
+}
